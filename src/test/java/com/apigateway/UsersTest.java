@@ -1,3 +1,5 @@
+package com.apigateway;
+
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.BeforeAll;
