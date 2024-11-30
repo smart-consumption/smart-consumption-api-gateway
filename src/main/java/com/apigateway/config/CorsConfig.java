@@ -13,23 +13,11 @@ public class CorsConfig {
         CorsConfiguration corsConfig = new CorsConfiguration();
 
         corsConfig.addAllowedOrigin("http://localhost:4200"); 
-        
 
-        corsConfig.addAllowedMethod("GET");
-        corsConfig.addAllowedMethod("POST");
-        corsConfig.addAllowedMethod("PUT");
-        corsConfig.addAllowedMethod("DELETE");
-        corsConfig.addAllowedMethod("OPTIONS");
-        
+        corsConfig.addAllowedMethod("*");
+        corsConfig.addAllowedHeader("*");
 
-        corsConfig.addAllowedHeader("Authorization");
-        corsConfig.addAllowedHeader("Content-Type");
-        corsConfig.addAllowedHeader("Accept");
-        corsConfig.addAllowedHeader("Origin");
-        
         corsConfig.setAllowCredentials(true);
-        
-        // Tiempo de cache de la configuración CORS
         corsConfig.setMaxAge(3600L);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
